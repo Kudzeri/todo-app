@@ -15,10 +15,9 @@ export const UsersPage: React.FC = () => {
     <div>
       <h1 className="text-3xl font-bold mb-3">Users:</h1>
 
-      {/* Кнопка-тоггл */}
       <button
         onClick={() => setShowForm(prev => !prev)}
-        className="mb-4 px-4 py-2 bg-black text-white rounded-md active:bg-white active:text-black border-2 transition"
+        className="mb-4 px-4 py-2 bg-black text-white rounded-md active:bg-white active:text-black border-2 transition-colors duration-300"
       >
         {showForm ? "Close" : "Add User"}
       </button>

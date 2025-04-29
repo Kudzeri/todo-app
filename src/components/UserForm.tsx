@@ -27,7 +27,7 @@ export const UserForm: React.FC<Props> = ({
              className="border-black border-2" />
     </div>
     <button type="submit"
-      className="border-2 rounded-md bg-black text-white p-2 hover:bg-gray-800 active:bg-white active:text-black transition-colors duration-300 justify-center w-full">
+      className="border-2 rounded-md bg-black text-white p-2 hover:bg-gray-800 active:bg-white active:text-black transition-colors duration-300 just">
       Submit
     </button>
     {errors.length > 0 && (

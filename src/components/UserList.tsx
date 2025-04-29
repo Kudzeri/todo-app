@@ -16,7 +16,7 @@ export const UserList: React.FC<Props> = ({ users, onDelete }) => (
         <p className="text-gray-600">{u.email}</p>
         <button
           onClick={() => onDelete(u.id)}
-          className="bg-red-400 text-red-100 border-2 rounded-md p-0.5 active:bg-red-500 active:text-red-300 shadow-2xl"
+          className="bg-red-700 text-white border-2 rounded-md p-0.5 active:bg-red-800 shadow-2xl hover:bg-red-600 transition-colors duration-300 mt-2"
         >
           Delete
         </button>
