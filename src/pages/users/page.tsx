@@ -5,7 +5,7 @@ import { UserForm } from "../../components/UserForm";
 import { UserList } from "../../components/UserList";
 
 export const UsersPage: React.FC = () => {
-  const { users, addUser } = useUsers();
+  const { users, addUser, removeUser } = useUsers();
   const { name, email, errors, setName, setEmail, handleSubmit } = useUserForm();
 
   return (
@@ -19,7 +19,7 @@ export const UsersPage: React.FC = () => {
         onEmailChange={setEmail}
         onSubmit={() => handleSubmit(({ name, email }) => addUser({ name, email }))}
       />
-      <UserList users={users} />
+      <UserList users={users} onDelete={removeUser} />
     </div>
   );
 };

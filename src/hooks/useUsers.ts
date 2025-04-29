@@ -8,5 +8,9 @@ export const useUsers = () => {
     setUsers((prev) => [...prev, { id: prev.length + 1, ...user }]);
   }, []);
 
-  return { users, addUser };
+  const removeUser = useCallback((id: number) => {
+    setUsers((prev) => prev.filter((user) => user.id !== id));
+    }, []);
+
+  return { users, addUser, removeUser };
 };
