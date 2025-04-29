@@ -7,8 +7,6 @@ import { UserList } from "../../components/UserList";
 export const UsersPage: React.FC = () => {
   const { users, addUser, removeUser } = useUsers();
   const { name, email, errors, setName, setEmail, handleSubmit } = useUserForm();
-
-  // Стейт для переключения формы
   const [showForm, setShowForm] = useState(false);
 
   return (
@@ -32,7 +30,7 @@ export const UsersPage: React.FC = () => {
           onSubmit={() => {
             handleSubmit(({ name, email }) => {
               addUser({ name, email });
-              // setShowForm(false);
+              setShowForm(false);
             });
           }}
         />
