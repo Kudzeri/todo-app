@@ -22,7 +22,7 @@ export const UserForm: React.FC<Props> = ({
     </div>
     <div className="mb-4 flex gap-3">
       <label htmlFor="email" className="text-xl">Email:</label>
-      <input id="email" value={email}
+      <input type="email" id="email" value={email}
              onChange={e => onEmailChange(e.target.value)}
              className="border-black border-2" />
     </div>
