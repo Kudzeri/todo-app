@@ -5,7 +5,7 @@ import { UserForm } from "../../components/UserForm";
 import { UserList } from "../../components/UserList";
 
 export const UsersPage: React.FC = () => {
-  const { users, addUser, removeUser } = useUsers();
+  const { users, addUser, removeUser, loading } = useUsers();
   const { name, email, errors, setName, setEmail, handleSubmit } = useUserForm();
   const [showForm, setShowForm] = useState(false);
 
@@ -36,7 +36,11 @@ export const UsersPage: React.FC = () => {
         />
       )}
 
-      <UserList users={users} onDelete={removeUser} />
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <UserList users={users} onDelete={removeUser} />
+      )}
     </div>
   );
 };

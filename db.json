@@ -1,4 +1,10 @@
 {
   "tasks": [],
-  "users": []
+  "users": [
+    {
+      "id": "eb45",
+      "name": "Михаил",
+      "email": "kudzeri@gmail.com"
+    }
+  ]
 }
