@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { User } from "../types/User";
 
 interface Props {
@@ -12,7 +13,9 @@ export const UserList: React.FC<Props> = ({ users, onDelete }) => (
         key={u.id}
         className="p-4 border border-gray-300 rounded-md shadow-sm max-w-48"
       >
-        <h2 className="text-xl font-semibold">{u.name}</h2>
+        <NavLink to={`/${u.id}/tasks`} className="text-xl font-semibold">
+          {u.name}
+        </NavLink>
         <p className="text-gray-600">{u.email}</p>
         <button
           onClick={() => onDelete(u.id)}
@@ -24,4 +27,3 @@ export const UserList: React.FC<Props> = ({ users, onDelete }) => (
     ))}
   </div>
 );
-
